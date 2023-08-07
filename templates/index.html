@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdFraudSmart</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <style>
@@ -15,7 +18,7 @@
         background-color: #f0f0f0;
       }
       .header {
-        background-color: #007DC6;
+        background-color: #007dc6;
         color: white;
         text-align: center;
         font-size: 72px;
@@ -39,7 +42,7 @@
         padding: 20px;
         padding-left: 40px;
         padding-right: 40px;
-        background-color: #FFD100;
+        background-color: #ffd100;
         height: 680px;
       }
       .div-header h3 {
@@ -66,7 +69,7 @@
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 10px;
-        background-color: #007DC6;
+        background-color: #007dc6;
         color: white;
       }
       .div-content-img {
@@ -103,7 +106,7 @@
         padding: 10px;
       }
       .footer {
-        background-color: #007DC6;
+        background-color: #007dc6;
         color: white;
         text-align: center;
         font-size: 24px;
@@ -122,55 +125,70 @@
         transition: transform 0.3s ease;
       }
       .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            font-size: 18px;
-        }
-        .form-label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .file-input {
-            display: block;
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #FFD100;
-            border-radius: 4px;
-        }
-        .submit-btn {
-            margin-top: 10px;
-        }
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+      }
+      .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .file-input {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ffd100;
+        border-radius: 4px;
+      }
+      .submit-btn {
+        margin-top: 10px;
+      }
     </style>
     <header class="header">AdFraudSmart</header>
     <div class="div-header">
-      <img class="header-img" src="\images\walmart.jpg" />
+      <img class="header-img" src="\static\walmart.jpg" />
       <div>
-        <h3 class="div-header-h3">Smartly Guarding E-Commerce Advertisements from Fraud</h3>
+        <h3 class="div-header-h3">
+          Smartly Guarding E-Commerce Advertisements from Fraud
+        </h3>
         <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="form-container">
-                        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label class="form-label" for="file">Upload a CSV File:</label>
-                                <input class="file-input" type="file" name="file" accept=".csv" required>
-                            </div>
-                            <button class="btn btn-primary submit-btn" type="submit">Upload and Detect Fraud</button>
-                        </form>
-                    </div>
-                </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="form-container">
+                <form
+                  action="{{ url_for('upload_file') }}"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                  <div class="form-group">
+                    <label class="form-label" for="file"
+                      >Upload a CSV File:</label
+                    >
+                    <input
+                      class="file-input"
+                      type="file"
+                      name="file"
+                      accept=".csv"
+                      required
+                    />
+                  </div>
+                  <button class="btn btn-primary submit-btn" type="submit">
+                    Upload and Detect Fraud
+                  </button>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-      
+      </div>
     </div>
     <div class="div-content">
       <h4 class="div-content-h4">Model Analytics</h4>
       <img
         class="div-content-img"
-        src="\images\heatmap.jpeg"
+        src="\static\heatmap.jpeg"
         alt="Imported Image here"
       />
 
@@ -183,7 +201,7 @@
         <li>Valid Conversions: {{ metrics.valid_conversions }}</li>
         <li>Conversion Rate: {{ metrics.conversion_rate }}</li>
       </ul>
-      
+
       <h4 class="div-content-h4">Fraud IP addresses:</h4>
       <ol class="div-content-list">
         <ul>
@@ -192,8 +210,6 @@
           {% endfor %}
         </ul>
       </ol>
-
-      
     </div>
     <footer class="footer">
       Made By Team-12 : AdFraudSmart<br />
