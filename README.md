@@ -6,8 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="![ReadMeImage](https://github.com/aarushichopkar/Team_12-Walmart-Hackathon/assets/99742201/36e4f741-fcbe-45ca-a42b-1208d131e1bc)
-" alt="Project Screenshot">
+  <img src="/templates/images/ReadMeImage.png" alt="Project Screenshot">
 </p>
 
 ## Table of Contents
