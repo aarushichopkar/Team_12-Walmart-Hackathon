@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FraudSmart</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      .header {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        font-size: 48px;
+        padding: 40px 0;
+      }
+      .header-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .div-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #444;
+      }
+      .div-header h3 {
+        font-size: 28px;
+        color: white;
+        margin: 0;
+        padding: 20px;
+      }
+      .div-content {
+        background-color: #fff;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+      .div-content h4 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: gainsboro;
+      }
+      .div-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+      }
+      .div-content-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .div-content-list > li {
+        font-size: 24px;
+        padding: 10px;
+        color: #ee0000;
+      }
+      .div-content-unordered-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .div-content-unordered-list > li {
+        font-size: 28px;
+        padding: 10px;
+      }
+      .footer {
+        background-color: #8103ff;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        padding: 20px;
+      }
+      /* Hover effects */
+      .div-content-list > li:hover,
+      .div-content-unordered-list > li:hover {
+        background-color: #f0f0f0;
+        color: #ee0000;
+        cursor: pointer;
+      }
+      .div-content-img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+    </style>
+    <header class="header">AdFraudSmart</header>
+    <div class="div-header">
+      <img class="header-img" src="\images\headerPage3.jpg" />
+      <h3 class="div-header-h3">
+        Smartly Guarding E-Commerce Advertisements from Fraud
+      </h3>
+    </div>
+    <div class="div-content">
+      <h4 class="div-content-h4">Model Analytics</h4>
+      <img
+        class="div-content-img"
+        src="your-image-url.jpg"
+        alt="Imported Image here"
+      />
+
+      <h4 class="div-content-h4">Fraud IP addresses:</h4>
+      <ol class="div-content-list">
+        <ul>
+          {% for ip in flagged_ips %}
+          <li>{{ ip }}</li>
+          {% endfor %}
+        </ul>
+      </ol>
+
+      <h4 class="div-content-h4">Ad Metrics</h4>
+      <ul class="div-content-unordered-list">
+        <li>Total Tracked Ads: {{metrics.tt}}</li>
+        <li>Click-through Ratio: {{ metrics.ctr }}</li>
+        <li>Cost of Click (CPC): {{ metrics.cpc }}</li>
+        <li>Cost of Mille (CPM): {{ metrics.cpm }}</li>
+        <li>Valid Conversions: {{ metrics.valid_conversions }}</li>
+        <li>Conversion Rate: {{ metrics.conversion_rate }}</li>
+      </ul>
+    </div>
+    <footer class="footer">
+      Made By Team-12 : AdFraudSmart<br />
+      <br />
+      Aarushi Chopkar<br />
+      Smridhi Dhingra<br />
+      Pratiksha Kothawade
+    </footer>
+  </body>
+</html>
